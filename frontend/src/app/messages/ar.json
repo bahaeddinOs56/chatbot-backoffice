@@ -1,0 +1,37 @@
+{
+    "app": {
+      "title": "إدارة روبوت المحادثة",
+      "dashboard": "لوحة التحكم",
+      "qa": "إدارة الأسئلة والأجوبة",
+      "users": "إدارة المستخدمين",
+      "analytics": "التحليلات",
+      "billing": "الفواتير",
+      "settings": "الإعدادات"
+    },
+    "common": {
+      "save": "حفظ",
+      "cancel": "إلغاء",
+      "delete": "حذف",
+      "edit": "تعديل",
+      "add": "إضافة",
+      "search": "بحث",
+      "filter": "تصفية",
+      "loading": "جاري التحميل..."
+    },
+    "profile": {
+      "myProfile": "ملفي الشخصي",
+      "accountSettings": "إعدادات الحساب",
+      "security": "الأمان والخصوصية",
+      "notifications": "تفضيلات الإشعارات",
+      "logout": "تسجيل الخروج"
+    },
+    "language": {
+      "english": "الإنجليزية",
+      "arabic": "العربية",
+      "french": "الفرنسية",
+      "spanish": "الإسبانية",
+      "selectLanguage": "اختر اللغة"
+    }
+  }
+  
+  

@@ -1,0 +1,37 @@
+{
+    "app": {
+      "title": "Gestion de Chatbot",
+      "dashboard": "Tableau de bord",
+      "qa": "Gestion des Q&R",
+      "users": "Gestion des utilisateurs",
+      "analytics": "Analytique",
+      "billing": "Facturation",
+      "settings": "Paramètres"
+    },
+    "common": {
+      "save": "Enregistrer",
+      "cancel": "Annuler",
+      "delete": "Supprimer",
+      "edit": "Modifier",
+      "add": "Ajouter",
+      "search": "Rechercher",
+      "filter": "Filtrer",
+      "loading": "Chargement..."
+    },
+    "profile": {
+      "myProfile": "Mon Profil",
+      "accountSettings": "Paramètres du compte",
+      "security": "Sécurité et confidentialité",
+      "notifications": "Préférences de notification",
+      "logout": "Se déconnecter"
+    },
+    "language": {
+      "english": "Anglais",
+      "arabic": "Arabe",
+      "french": "Français",
+      "spanish": "Espagnol",
+      "selectLanguage": "Choisir la langue"
+    }
+  }
+  
+  

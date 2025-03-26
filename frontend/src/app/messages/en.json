@@ -1,0 +1,21 @@
+{
+    "common": {
+      "dashboard": "Dashboard",
+      "analytics": "Analytics",
+      "qa": "Q&A Management",
+      "users": "Users",
+      "settings": "Settings",
+      "help": "Help",
+      "logout": "Logout",
+      "search": "Search...",
+      "profile": "Profile",
+      "billing": "Billing"
+    },
+    "dashboard": {
+      "title": "Dashboard",
+      "welcome": "Welcome to the Chatbot Management Dashboard",
+      "summary": "Here's a summary of your chatbot's performance"
+    }
+  }
+  
+  
