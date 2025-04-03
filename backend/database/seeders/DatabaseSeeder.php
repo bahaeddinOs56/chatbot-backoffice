@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use Hash;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -9,14 +10,15 @@ class DatabaseSeeder extends Seeder
     /**
      * Seed the application's database.
      */
+    
     public function run(): void
     {
         // Create an admin user if it doesn't exist
         if (!\App\Models\User::where('email', 'admin@example.com')->exists()) {
             \App\Models\User::factory()->create([
                 'name' => 'Admin User',
-                'email' => 'admin@example.com',
-                'password' => bcrypt('admin123'),
+                'email' => '    ',
+                'password' => Hash::make('admin123'),
                 'is_admin' => true, // Add this line to make the user an admin
             ]);
         } else {

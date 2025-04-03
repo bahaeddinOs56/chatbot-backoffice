@@ -30,14 +30,14 @@ return new class extends Migration
             $table->index('priority');
         });
         
-        // Add database-specific full-text search index
-        if (DB::connection()->getDriverName() === 'pgsql') {
-            // PostgreSQL full-text search index
-            DB::statement('CREATE INDEX qa_pairs_search_idx ON qa_pairs USING gin(to_tsvector(\'english\', question || \' \' || answer))');
-        } else {
-            // MySQL full-text search index
-            DB::statement('ALTER TABLE qa_pairs ADD FULLTEXT search_index (question, answer)');
-        }
+        // // Add database-specific full-text search index
+        // if (DB::connection()->getDriverName() === 'pgsql') {
+        //     // PostgreSQL full-text search index
+        //     DB::statement('CREATE INDEX qa_pairs_search_idx ON qa_pairs USING gin(to_tsvector(\'english\', question || \' \' || answer))');
+        // } else {
+        //     // MySQL full-text search index
+        //     DB::statement('ALTER TABLE qa_pairs ADD FULLTEXT search_index (question, answer)');
+        // }
     }
 
     /**

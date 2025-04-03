@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Middleware\Cors;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Log;
@@ -25,20 +26,33 @@ use App\Http\Controllers\API\CompanyController;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
-
-// Debug route to test API routing
+Route::middleware([Cors::class])->group(function () {
 Route::get('/test', function (Request $request) {
     Log::info('API test route accessed');
     return response()->json([
         'message' => 'API routes are working',
         'method' => $request->method(),
-        'timestamp' => now()->toIso8601String()
+        'timestamp' => now()->toIso8601String(),
+        'data'=>'test'
     ], 200, [
         'Access-Control-Allow-Origin' => '*',
         'Access-Control-Allow-Methods' => 'GET, OPTIONS'
     ]);
 });
+});
 
+Route::options('/{any}', function () {
+    return response('', 200)
+        ->header('Access-Control-Allow-Origin', 'http://localhost:3000')
+        ->header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS')
+        ->header('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With')
+        ->header('Access-Control-Allow-Credentials', 'true');
+})->where('any', '.*');
+
+
+Route::get('/test-cors', function () {
+    return response()->json(['message' => 'CORS test successful']);
+});
 // Public routes
 Route::post('/login', [AuthController::class, 'login']);
 
